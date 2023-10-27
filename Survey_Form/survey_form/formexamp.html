@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="myform.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <p class="note"><span class="mynote">Required Fileds are followed by *</span></p>
+
+        <form id="survey-form">
+            <label for="first-name">First Name: *</label>
+            <input type="text" id="first-name" required placeholder="Liladhar">
+            
+            <label for="last-name">Last Name: *</label>
+            <input type="text" id="last-name" required>
+            
+            <label for="dob">Date of Birth: *</label>
+            <input type="text" id="dob" placeholder="MM/DD/YYYY" required>
+            
+            <label for="country">Country: *</label>
+            <select id="country" required>
+                <option value="">Select a country</option>
+                <option value="usa">INDIA</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <!-- Add more countries here -->
+            </select>
+            
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="checkbox" id="male">
+            <label for="female">Female</label>
+            <input type="checkbox" id="female">
+            
+            <label for="profession">Profession: *</label>
+            <input type="text" id="profession" required>
+            
+            <label for="email">Email: *</label>
+            <input type="email" id="email" required>
+            
+            <label for="mobile">Mobile Number: *</label>
+            <input type="tel" id="mobile" required>
+            
+            <div class="btn-container">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" id="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="popup" style="display: none; text-align: center; padding: 20px; background-color: #fff; border-radius: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <h2>Survey Results</h2>
+        <p id="result"></p>
+        <button id="close-popup" class="btn">Close</button>
+    </div>
+
+    </body>
+    <script src="myform.js"></script>
+</html>
